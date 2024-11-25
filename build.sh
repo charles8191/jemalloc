@@ -6,6 +6,6 @@ rm dev.tar.gz
 mv jemalloc-dev jemalloc
 cd jemalloc
 ./autogen.sh
-make
+make -j$(nproc)
 cp --dereference -f lib/libjemalloc.so /out/libjemalloc.so
 cd ../..
